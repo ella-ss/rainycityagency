@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Product Colors",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "product_colors",
+        "label": "Product Colors"
+      }
+    ]
+  }
+]

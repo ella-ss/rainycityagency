@@ -1,0 +1,18 @@
+body {
+  font-family: 'Harmonia';
+  font-size: 15px;
+  line-height: 19px;
+  color: $color-font;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.lazy {
+  width: 100%;
+}

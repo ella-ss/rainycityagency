@@ -1,0 +1,54 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  font-size: 15px;
+  line-height: 1;
+  width: 188px;
+  margin: auto;
+  padding: 16px 0 13px;
+  color: #fff;
+  font-family: 'Futura';
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    background-color: $color-third;
+  }
+}
+
+.btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none
+}
+
+.btn--primary {
+  background-color: $color-primary;
+  &:hover,
+  &:active {
+    background-color: $color-third;
+    color: #fff;
+  }
+}
+
+.btn--secondary {
+  background-color: #fff;
+  color: $color-primary;
+  &:hover,
+  &:active {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
+
+.label {
+  color: $color-primary;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}

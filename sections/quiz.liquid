@@ -1,0 +1,337 @@
+<style>
+    #shopify-section-{{section.id}} .start_step {
+        {% if section.settings.image_mobile != blank %}
+            background-image: url("{{ section.settings.image_mobile | img_url: 'master' }}");
+        {% endif %}
+        display: flex;
+        align-items: center;
+        background-color: #F5D6DD;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+    @media all and (min-width: 1215px) {
+        #shopify-section-{{section.id}} .start_step {
+            {% if section.settings.image != blank %}
+                background-image: url("{{ section.settings.image | img_url: 'master' }}");
+            {% endif %}
+        }
+    }
+</style>
+<div class="quiz start_step visible" data-step="0">
+    <div class="container">
+        <div class="row justify-content-end align-items-center">
+            <div class="col col-md-7 quiz__content">
+                {% if section.settings.title != blank %}
+                    <div class="quiz__content-title">
+                        {{ section.settings.title }}
+                    </div>
+                {% endif %}
+                {% if section.settings.subtitle != blank %}
+                    <div class="quiz__content-subtitle">
+                        {{ section.settings.subtitle }}
+                    </div>
+                {% endif %}
+                <div class="btn btn--primary quiz__next">
+                    GET STARTED
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="quiz first_step" data-step="1" data-question="type">
+    <div class="container">
+        <div class="row justify-content-center quiz__progress">
+            <div class="quiz__progress-stage active" data-stage="1"></div>
+            <div class="quiz__progress-stage" data-stage="2"></div>
+            <div class="quiz__progress-stage" data-stage="3"></div>
+            <div class="quiz__progress-stage" data-stage="4"></div>
+        </div>
+        <div class="col quiz__question">
+            {% if section.settings.first_title != blank %}
+                <div class="quiz__question-title">
+                    {{ section.settings.first_title }}
+                </div>
+            {% endif %}
+            {% if section.settings.first_subtitle != blank %}
+                <div class="quiz__question-subtitle">
+                    {{ section.settings.first_subtitle }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="quiz__answers row justify-content-center">
+            {% for block in section.blocks %}
+                {% if block.type contains 'first' %}
+                    <div class="quiz__answers-item" data-answer="{{ block.settings.text | capitalize }}">
+                        <div class="quiz__answers-item-image">
+                            <img src="{{ block.settings.image | img_url: '20x' }}"
+                                 data-src="{{ block.settings.image | img_url: '120x120', crop:'center' }}"
+                                 alt="{{ block.settings.text | escape }}"
+                                 class="lazy">
+                        </div>
+                        <div class="quiz__answers-item-title">
+                            {{ block.settings.text }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="quiz__btns row justify-content-center">
+            <div class="btn btn--secondary quiz__prev">
+                go back
+            </div>
+            <div class="btn btn--primary quiz__next">
+                next
+            </div>
+        </div>
+        <div class="label quiz__restart">
+            RESTART QUIZ
+        </div>
+    </div>
+</div>
+<div class="quiz second_step" data-step="2" data-question="concern">
+    <div class="container">
+        <div class="row justify-content-center quiz__progress">
+            <div class="quiz__progress-stage active" data-stage="1"></div>
+            <div class="quiz__progress-stage active" data-stage="2"></div>
+            <div class="quiz__progress-stage" data-stage="3"></div>
+            <div class="quiz__progress-stage" data-stage="4"></div>
+        </div>
+        <div class="col quiz__question">
+            {% if section.settings.second_title != blank %}
+                <div class="quiz__question-title">
+                    {{ section.settings.second_title }}
+                </div>
+            {% endif %}
+            {% if section.settings.second_subtitle != blank %}
+                <div class="quiz__question-subtitle">
+                    {{ section.settings.second_subtitle }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="quiz__answers row justify-content-center">
+            {% for block in section.blocks %}
+                {% if block.type contains 'second' %}
+                    <div class="quiz__answers-item" data-answer="{{ block.settings.text | capitalize }}">
+                        <div class="quiz__answers-item-image">
+                            <img src="{{ block.settings.image | img_url: '20x' }}"
+                                 data-src="{{ block.settings.image | img_url: '120x120', crop:'center' }}"
+                                 alt="{{ block.settings.text | escape }}"
+                                 class="lazy">
+                        </div>
+                        <div class="quiz__answers-item-title">
+                            {{ block.settings.text }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="quiz__btns row justify-content-center">
+            <div class="btn btn--secondary quiz__prev">
+                go back
+            </div>
+            <div class="btn btn--primary quiz__next">
+                next
+            </div>
+        </div>
+        <div class="label quiz__restart">
+            RESTART QUIZ
+        </div>
+    </div>
+</div>
+<div class="quiz third_step" data-step="3" data-question="style">
+    <div class="container">
+        <div class="row justify-content-center quiz__progress">
+            <div class="quiz__progress-stage active" data-stage="1"></div>
+            <div class="quiz__progress-stage active" data-stage="2"></div>
+            <div class="quiz__progress-stage active" data-stage="3"></div>
+            <div class="quiz__progress-stage" data-stage="4"></div>
+        </div>
+        <div class="col quiz__question">
+            {% if section.settings.third_title != blank %}
+                <div class="quiz__question-title">
+                    {{ section.settings.third_title }}
+                </div>
+            {% endif %}
+            {% if section.settings.third_subtitle != blank %}
+                <div class="quiz__question-subtitle">
+                    {{ section.settings.third_subtitle }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="quiz__answers row justify-content-between">
+            {% for block in section.blocks %}
+                {% if block.type contains 'third' %}
+                    <div class="quiz__answers-item" data-answer="{{ block.settings.text | capitalize }}">
+                        <div class="quiz__answers-item-title">
+                            {{ block.settings.text }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="quiz__btns row justify-content-center">
+            <div class="btn btn--secondary quiz__prev">
+                go back
+            </div>
+            <div class="btn btn--primary quiz__next quiz__result">
+                GET YOUR RESULTS
+            </div>
+        </div>
+        <div class="label quiz__restart">
+            RESTART QUIZ
+        </div>
+    </div>
+</div>
+<div class="quiz results_step" data-step="4" data-question="style">
+    <div class="container">
+        <div class="row justify-content-center quiz__progress">
+            <div class="quiz__progress-stage active" data-stage="1"></div>
+            <div class="quiz__progress-stage active" data-stage="2"></div>
+            <div class="quiz__progress-stage active" data-stage="3"></div>
+            <div class="quiz__progress-stage active" data-stage="4"></div>
+        </div>
+        <div class="col quiz__question">
+            {% if section.settings.results_title != blank %}
+                <div class="quiz__question-title">
+                    {{ section.settings.results_title }}
+                </div>
+            {% endif %}
+            {% if section.settings.results_subtitle != blank %}
+                <div class="quiz__question-subtitle">
+                    {{ section.settings.results_subtitle }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="quiz__results row justify-content-center" id="products-container"></div>
+        <div class="quiz__empty" style="display: none">Sorry, we couldn't find any products for you</div>
+        <div class="quiz__btns row justify-content-center">
+            <a class="btn btn--secondary quiz__exit" href="/">
+                exit
+            </a>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Quiz",
+"settings": [
+    {
+        "type": "richtext",
+        "id": "title",
+        "label": "Title",
+        "default": "<h1>Find the perfect products for you</h1>"
+    },
+    {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Our personalised consultation will tailor your product line up based on your hair needs and concerns. Let the experts do the hard work for you. Find out your ideal cocktail of hair care designed to make you look as good as you feel."
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Background Mobile Image"
+    },
+    {
+        "type": "richtext",
+        "id": "first_title",
+        "label": "First Step Title",
+        "default": "<h2>What is your hair type?</h2>"
+    },
+    {
+        "type": "text",
+        "id": "first_subtitle",
+        "label": "First Step  Subtitle",
+        "default": "Select all that apply"
+    },
+    {
+        "type": "richtext",
+        "id": "second_title",
+        "label": "Second Step Title",
+        "default": "<h2>What is your hair concern?</h2>"
+    },
+    {
+        "type": "text",
+        "id": "second_subtitle",
+        "label": "Second Step Subtitle",
+        "default": "Select all that apply"
+    },
+    {
+        "type": "richtext",
+        "id": "third_title",
+        "label": "Third Step Title",
+        "default": "<h2>How do you style your hair?</h2>"
+    },
+    {
+        "type": "text",
+        "id": "third_subtitle",
+        "label": "Third Step Subtitle",
+        "default": "Select all that apply"
+    },
+    {
+        "type": "richtext",
+        "id": "results_title",
+        "label": "Results Page Title",
+        "default": "<h2>Your suggested products</h2>"
+    },
+    {
+        "type": "text",
+        "id": "results_subtitle",
+        "label": "Results Page Subtitle",
+        "default": "Fusce gravida cursus arcu, imperdiet placerat neque mollis ut. In hac habitasse platea dictumst. Cras aliquet eros vel augue convallis."
+    }
+],
+"blocks": [
+    {
+        "name": "First Step",
+        "type": "first",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Answer Image"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Answer Text"
+            }
+    ]
+    },
+    {
+        "name": "Second Step",
+        "type": "second",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Answer Image"
+        },
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Answer Text"
+        }
+    ]
+    },
+    {
+        "name": "Third Step",
+        "type": "third",
+        "settings": [
+        {
+            "type": "text",
+            "id": "text",
+            "label": "Answer Text"
+        }
+    ]
+    }
+]
+}
+{% endschema %}

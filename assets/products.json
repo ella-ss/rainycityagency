@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Product name 1",
+    "conditions": {
+      "type": ["Wavy", "Spirals"],
+      "concern": ["Curl care"],
+      "style": ["Hair dryer"]
+    },
+    "price": "£10",
+    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im1.png?v=121065191381368697551688503809"
+  },
+  {
+    "name": "Product name 2",
+    "conditions": {
+      "type": ["Straight"],
+      "concern": ["Blonde care", "Dry & frizzy"],
+      "style": ["Straightener"]
+    },
+    "price": "£20",
+    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im1.png?v=121065191381368697551688503809"
+  },
+  {
+    "name": "Product name 3",
+    "conditions": {
+      "type": ["Coils"],
+      "concern": ["Dull & lacks shine"],
+      "style": ["Protective braids"]
+    },
+    "price": "£30",
+    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im2.png?v=1646002974237323091688503811"
+  },
+  {
+    "name": "Product name 4",
+    "conditions": {
+      "type": ["Loose curls", "Ringlets", "Corkscrew curls"],
+      "concern": ["Breakage & hair growth", "Vibrant blonde tones", "Damaged & over processed"],
+      "style": ["Curling iron", "Air dry", "None"]
+    },
+    "price": "£40",
+    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im2.png?v=1646002974237323091688503811"
+  }
+]

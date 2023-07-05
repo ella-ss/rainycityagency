@@ -1,4 +1,10 @@
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "quiz": {
+      "type": "quiz"
+    }
+  },
+  "order": [
+    "quiz"
+  ]
 }

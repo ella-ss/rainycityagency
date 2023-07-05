@@ -39,10 +39,8 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     {{ 'styles.min.css' | asset_url | stylesheet_tag }}
+    {% include 'fonts' %}
 
     {{ content_for_header }}
 
@@ -65,6 +63,7 @@
     <script>
       let theme = window.theme || {};
       let lazyLoadInstance = new LazyLoad({});
+      window.products = '{{ 'products.json' | asset_url }}';
     </script>
 
     <script src="{{ 'main.min.js' | asset_url }}"></script>

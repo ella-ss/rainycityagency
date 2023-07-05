@@ -7,7 +7,7 @@
       "style": ["Hair dryer"]
     },
     "price": "£10",
-    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im1.png?v=121065191381368697551688503809"
+    "image": "https://cdn.shopify.com/s/files/1/0763/7185/3588/files/Product_Image_1.png?v=1688549500"
   },
   {
     "name": "Product name 2",
@@ -17,7 +17,7 @@
       "style": ["Straightener"]
     },
     "price": "£20",
-    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im1.png?v=121065191381368697551688503809"
+    "image": "https://cdn.shopify.com/s/files/1/0763/7185/3588/files/Product_Image_1.png?v=1688549500"
   },
   {
     "name": "Product name 3",
@@ -27,7 +27,7 @@
       "style": ["Protective braids"]
     },
     "price": "£30",
-    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im2.png?v=1646002974237323091688503811"
+    "image": "https://cdn.shopify.com/s/files/1/0763/7185/3588/files/Product_Image_2.png?v=1688549500"
   },
   {
     "name": "Product name 4",
@@ -37,6 +37,6 @@
       "style": ["Curling iron", "Air dry", "None"]
     },
     "price": "£40",
-    "image": "//rainy-city-tests.myshopify.com/cdn/shop/t/8/assets/im2.png?v=1646002974237323091688503811"
+    "image": "https://cdn.shopify.com/s/files/1/0763/7185/3588/files/Product_Image_2.png?v=1688549500"
   }
 ]

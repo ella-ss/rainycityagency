@@ -78,6 +78,7 @@ quiz_answers.forEach(function (element) {
 
 //click the result btn
 let quiz_result = document.querySelectorAll('.quiz__result');
+const productsContainer = document.getElementById('products-container');
 // function to render products on the results page
 function renderProduct(productName) {
     // searching product by its Name
@@ -104,7 +105,6 @@ function renderProduct(productName) {
   `;
 
     // adding html render to the container
-    const productsContainer = document.getElementById('products-container');
     if (productsContainer) {
         productsContainer.innerHTML = productsContainer.innerHTML + productHTML;
     }
@@ -112,6 +112,7 @@ function renderProduct(productName) {
 
 quiz_result.forEach(function (element) {
     element.addEventListener('click', function () {
+        productsContainer.innerHTML = '';
         //search for the matching products based on the answers array
         let matchingProducts = productsArray.filter(function (product) {
             for (let step in product.conditions) {
@@ -149,6 +150,7 @@ restart.forEach(function (element) {
                 answers[key] = [];
             }
         });
+        productsContainer.innerHTML = '';
     });
 });
 
